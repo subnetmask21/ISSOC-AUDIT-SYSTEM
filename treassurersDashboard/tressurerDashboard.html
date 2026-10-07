@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../treassurersDashboard/treassurerDashboard.css">
+    <title>Treasurer Dashboard</title>
 </head>
 <body>
     <!--Header-->
     <header>
         <nav>
+            <!--search transactions-->
+
+            <!--notification button-->
+
+            <!--calendar-->
 
         </nav>
     </header>
@@ -18,12 +24,244 @@
             <!--Home Dashboard-->
             <a>Home</a>
 
-            <!--Masterlist-->
-            <a>Masterlist</a>
+            <!--Transactions (DROPDOWN)-->
+            <button class="dropdown-btn">
+                <span>Transactions</span>
+            </button>
 
-            <!--Documents-->
-            <a>Documents</a>
+            <!--Dropdown Contents-->
+            <div class="dropdown-content">
+                <!--All Transactions-->
+                <a class="dropdown-item">All Transactions</a>
+                <!--Collections-->
+                <a class="dropdown-item">Collections</a>
+                <!--Expenditures-->
+                <a class="dropdown-item">Expenditures</a>
+                <!--Pending Approvals-->
+                <a class="dropdown-item">Pending Approvals</a>
+                <!--Reimbursements-->
+                <a class="dropdown-item">Reimbursements</a>
+                <!--Transaction History-->
+                <a class="dropdown-item">Transaction history</a>
+            </div>
+
+            <!--Budget-->
+            <a>Budget</a>
+
+            <!--Reports-->
+            <a>Reports</a>
         </nav>
     </aside>
+
+    <main>
+        <!--Total balance Card-->
+        <div class="summaryTotalBalanceCard">
+            <span class="cardTitle">
+                Total Balance
+            </span>
+
+            <!--Balance Amount-->
+            <div class="card-body">
+                <!--Amount-->
+                <h2></h2>
+
+            </div>
+        </div>
+
+        <!--Total Income-->
+        <div class="summaryTotalIncomeCard">
+            <span class="cardTitle">
+                Total Income
+            </span>
+
+            <!--Income Amount-->
+            <div class="card-body">
+                <!--Amount-->
+                <h2></h2>
+
+            </div>
+        </div>
+
+        <!--Total Expense-->
+        <div class="summaryTotalExpenseCard">
+            <span class="cardTitle">
+                Total Expense
+            </span>
+
+            <!--Income Expense-->
+            <div class="card-body">
+                <!--Amount-->
+                <h2></h2>
+
+            </div>
+        </div>
+
+        <!--total of bank account/ E wallet used-->
+        <div class="summaryAccount">
+            <span class="cardTitle">
+                Bank Account / E wallet
+            </span>
+
+            <!--Account Amount-->
+            <div class="card-body">
+                <!--Amount-->
+                <h2></h2>
+
+            </div>
+        </div>
+
+        <!------------------------------------------------------------------------------->
+
+        <!--Income vs Expense card-->
+        <section class="chart-card">
+
+            <!-- Card Header -->
+            <div class="chart-header">
+
+                <div>
+                    <h2>Income vs. Expenses</h2>
+
+                    <div class="chart-legend">
+                        <span class="legend-item">
+                            <span class="legend-dot income"></span>
+                            Income
+                        </span>
+
+                        <span class="legend-item">
+                            <span class="legend-dot expenses"></span>
+                            Expenses
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Period Filter -->
+                <select class="chart-filter">
+                    <option>Last 6 Months</option>
+                    <option>This Year</option>
+                    <option>Last Year</option>
+                </select>
+
+            </div>
+
+
+            <!-- Chart Area -->
+            <div class="chart-container">
+
+                <!-- Y-Axis -->
+                <div class="y-axis">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+
+                <!-- Chart -->
+                <div class="chart">
+
+                    <!-- Grid Lines -->
+                    <div class="grid-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <!-- Chart goes here -->
+                    <div class="chart-data">
+                        <!-- JavaScript chart will be placed here -->
+                    </div>
+
+                    <!-- X-Axis -->
+                    <div class="x-axis">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        
+
+        <!--Expense Breakdown card will came from the js or the python-->
+
+        <!--Recent Transaction card-->
+        <section class="transactions-card">
+
+            <!-- Card Header -->
+            <div class="transactions-header">
+
+                <h2>Recent Transactions</h2>
+
+                <a href="#" class="view-all">
+                    View All
+                </a>
+
+            </div>
+
+
+            <!-- Transactions Table -->
+            <div class="table-container">
+
+                <table class="transactions-table">
+
+                    <!-- Table Header -->
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Description</th>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+
+                    <!-- Transaction Data -->
+                    <tbody id="transactions-list">
+
+                        <!-- Transaction rows will be added here -->
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+        <!--Bank Accounts/ Ewallet-->
+        <section class="bank-accounts-card">
+
+            <!-- Card Header -->
+            <div class="bank-accounts-header">
+
+                <h2>Bank Accounts</h2>
+
+                <button class="add-account-btn">
+                    + Add Account
+                </button>
+
+            </div>
+
+
+            <!-- Bank Accounts List -->
+            <div class="bank-accounts-list">
+
+                <!-- Bank Account Items will be added here -->
+
+            </div>
+
+        </section>
+
+    </main>
 </body>
 </html>
